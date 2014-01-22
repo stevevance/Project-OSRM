@@ -47,7 +47,7 @@ struct APIGrammar : qi::grammar<Iterator> {
         instruction = (-qi::lit('&')) >> qi::lit("instructions") >> '=' >> qi::bool_[boost::bind(&HandlerT::setInstructionFlag, handler, ::_1)];
         geometry    = (-qi::lit('&')) >> qi::lit("geometry")     >> '=' >> qi::bool_[boost::bind(&HandlerT::setGeometryFlag, handler, ::_1)];
         cmp         = (-qi::lit('&')) >> qi::lit("compression")  >> '=' >> qi::bool_[boost::bind(&HandlerT::setCompressionFlag, handler, ::_1)];
-        location    = (-qi::lit('&')) >> qi::lit("loc")          >> '=' >> (qi::double_ >> qi::lit(',') >> qi::double_)[boost::bind(&HandlerT::addCoordinate, handler, ::_1)];
+        location    = (-qi::lit('&')) >> qi::lit("loc")          >> '=' >> (qi::double_ >> qi::lit("%2C") >> qi::double_)[boost::bind(&HandlerT::addCoordinate, handler, ::_1)];
         hint        = (-qi::lit('&')) >> qi::lit("hint")         >> '=' >> stringwithDot[boost::bind(&HandlerT::addHint, handler, ::_1)];
         language    = (-qi::lit('&')) >> qi::lit("hl")           >> '=' >> string[boost::bind(&HandlerT::setLanguage, handler, ::_1)];
         alt_route   = (-qi::lit('&')) >> qi::lit("alt")          >> '=' >> qi::bool_[boost::bind(&HandlerT::setAlternateRouteFlag, handler, ::_1)];
