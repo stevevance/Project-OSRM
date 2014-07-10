@@ -3,7 +3,7 @@
 
 barrier_whitelist = { ["cattle_grid"] = true, ["border_control"] = true, ["toll_booth"] = true, ["sally_port"] = true, ["gate"] = true, ["no"] = true, ["entrance"] = true }
 access_tag_whitelist = { ["yes"] = true, ["bus"] = true, ["psv"] = true, ["motor_vehicle"] = true, ["vehicle"] = true, ["permissive"] = true, ["designated"] = true, ["restricted"] = true }
-access_tag_blacklist = { ["no"] = true, ["private"] = true, ["agricultural"] = true, ["forestry"] = true, ["emergency"] = true }
+access_tag_blacklist = { ["private"] = true, ["agricultural"] = true, ["forestry"] = true, ["emergency"] = true }
 access_tag_restricted = { ["destination"] = true, ["delivery"] = true }
 access_tags = { "bus", "psv", "motor_vehicle", "vehicle" }
 access_tags_hierachy = { "bus", "psv", "motor_vehicle", "vehicle", "access" }
