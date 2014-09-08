@@ -218,8 +218,9 @@ function way_function (way)
     way.name = ref
   elseif "" ~= name then
     way.name = name
---  else
+  else
       --    way.name = highway  -- if no name exists, use way type
+    way.name = "{highway:"..highway..", message:name not found}"
   end
 
   if "roundabout" == junction then

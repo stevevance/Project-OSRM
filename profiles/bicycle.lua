@@ -204,7 +204,7 @@ function way_function (way)
   else
     -- if no name exists, use way type
     -- this encoding scheme is excepted to be a temporary solution
-    way.name = "{highway:"..highway.."}"
+    way.name = "{highway:"..highway..", message:name not found}"
   end
 
   -- roundabout handling
