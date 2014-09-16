@@ -214,7 +214,9 @@ function way_function (way)
   local service  = way.tags:Find("service")
 
   -- Set the name that will be used for instructions
-  if "" ~= ref then
+  if "" ~= ref and "" ~= name then
+    way.name = name .. ' / ' .. ref
+  elseif "" ~= ref then
     way.name = ref
   elseif "" ~= name then
     way.name = name
