@@ -6,7 +6,7 @@ access_tag_whitelist = { ["yes"] = true, ["permissive"] = true, ["designated"] =
 access_tag_blacklist = { ["no"] = true, ["private"] = true, ["agricultural"] = true, ["forestery"] = true }
 access_tag_restricted = { ["destination"] = true, ["delivery"] = true }
 access_tags_hierachy = { "bicycle", "vehicle", "access" }
-cycleway_tags = {["track"]=true,["lane"]=true,["opposite"]=true,["opposite_lane"]=true,["opposite_track"]=true,["share_busway"]=true,["sharrow"]=true,["shared"]=true }
+cycleway_tags = {["track"]=true,["lane"]=true,["opposite"]=true,["opposite_lane"]=true,["opposite_track"]=true,["share_busway"]=true,["sharrow"]=true,["shared"]=true,["shared_lane"]=true,["buffered_lane"]=true }
 service_tag_restricted = { ["parking_aisle"] = true }
 restriction_exception_tags = { "bicycle", "vehicle", "access" }
 
